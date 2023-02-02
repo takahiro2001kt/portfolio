@@ -1,0 +1,9 @@
+<ifmodule mod_rewrite.c>
+RewriteEngine On
+
+RewriteCond %{THE_REQUEST} ^.*/index.html
+RewriteRule ^(.*)index.html$ https://k-takahiro.com/$1 [R=301,L]
+
+
+RewriteCond %{HTTPS} off
+</ifmodule>
